@@ -1,4 +1,4 @@
-# UnoWiFi101 Firmware Updater Tool for Arduino IDE
+# Uno WiFi Firmware Updater Tool for Arduino IDE
 
 This plugin is a GUI to update Firmware of the ESP8266 of the Uno WiFi Board.
 This plugin will be bundled with the IDE starting from v.1.8.2
@@ -7,8 +7,8 @@ This plugin will be bundled with the IDE starting from v.1.8.2
 
 - Download the tool [from this page](https://github.com/arduino-libraries/UnoWiFi-FirmwareUpdater-Plugin/releases/latest).
 - Create a `tools` folder in your sketchbook, if it doesn't exist yet.
-- Unpack the zip archive into `tools` folder (it will look like `.../Arduino/tools/WiFi101/tool/WiFi101.jar`)
-- Restart the Arduino IDE. 
+- Unpack the zip archive into `tools` folder (it will look like `.../Arduino/tools/UnoWiFi/tool/UnoWiFi.jar`)
+- Restart the Arduino IDE.
 
 ## Usage
 
@@ -24,7 +24,6 @@ This plugin will be bundled with the IDE starting from v.1.8.2
 
 ## Issues and suggestions
 
-Please open an issue [on github](https://github.com/arduino-org/WiFi101-FirmwareUpdater-Plugin/issues/new).
 Please open an issue [on github](https://github.com/arduino-libraries/WiFi101-FirmwareUpdater-Plugin/issues/new).
 
 ## Credits and license
@@ -57,4 +56,3 @@ This plugin is based on the WiFi101-FirmwareUpdater by Arduino LLC
  invalidate any other reasons why the executable file might be covered by
  the GNU General Public License.
 ```
-
