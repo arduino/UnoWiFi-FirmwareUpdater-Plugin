@@ -1,0 +1,23 @@
+### BUILD NOTES
+##requires PyInstaller
+
+##run pyinstaller to creare a standalone binary
+#mac os x
+pyinstaller --onefile --name esptool-macosx esptool.py
+
+#linux 32
+pyinstaller --onefile --name esptool-linux32 esptool.py
+
+#linux 32
+pyinstaller --onefile --name esptool-linux64 esptool.py
+
+#windows
+#linux 32
+pyinstaller --onefile --name esptool-windows.exe esptool.py
+
+#linux arm: Attention please: for Rasperry Pi the esptool.py script has been edited to change the response timeout from 5 to 15 seconds
+pyinstaller --onefile --name esptool-linuxarm esptool.py
+
+## copy bin file to the bin folder of the parent directory. change -<dist-name> with the distribution name
+mv ./dist/esptool-<dist-name> ../bin/
+rm -rf build ./dist/ esptool-<dist-name>.spec

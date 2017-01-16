@@ -1,19 +1,18 @@
-# WiFi101 Firmware Updater Tool for Arduino IDE [![Build Status](https://travis-ci.org/arduino-libraries/WiFi101-FirmwareUpdater-Plugin.svg?branch=master)](https://travis-ci.org/arduino-libraries/WiFi101-FirmwareUpdater-Plugin)
+# UnoWiFi101 Firmware Updater Tool for Arduino IDE
 
-This plugin is a GUI to update Firmware or SSL Certificates on shield or boards based
-on the Atmel WINC1500 WiFi chipset (for example the Arduino WiFi 101 Shield or the
-Arduino/Genuino MKR1000 board). This plugin is bundled with the IDE starting from v.1.6.10
+This plugin is a GUI to update Firmware of the ESP8266 of the Uno WiFi Board.
+This plugin will be bundled with the IDE starting from v.1.8.2
 
 ## Installation
 
-- Download the tool [from this page](https://github.com/arduino-libraries/WiFi101-FirmwareUpdater-Plugin/releases/latest).
+- Download the tool [from this page](https://github.com/arduino-libraries/UnoWiFi-FirmwareUpdater-Plugin/releases/latest).
 - Create a `tools` folder in your sketchbook, if it doesn't exist yet.
 - Unpack the zip archive into `tools` folder (it will look like `.../Arduino/tools/WiFi101/tool/WiFi101.jar`)
 - Restart the Arduino IDE. 
 
 ## Usage
 
-- Follow instructions [on this page](https://www.arduino.cc/en/Tutorial/FirmwareUpdater).
+- Follow instructions [on this page](http://www.arduino.org/learning/tutorials/advanced-guides/arduino-uno-wifi-firmware-updater).
 
 ## Screenshots
 
@@ -25,12 +24,15 @@ Arduino/Genuino MKR1000 board). This plugin is bundled with the IDE starting fro
 
 ## Issues and suggestions
 
+Please open an issue [on github](https://github.com/arduino-org/WiFi101-FirmwareUpdater-Plugin/issues/new).
 Please open an issue [on github](https://github.com/arduino-libraries/WiFi101-FirmwareUpdater-Plugin/issues/new).
 
 ## Credits and license
 
+This plugin is based on the WiFi101-FirmwareUpdater by Arduino LLC
+
 ```
- Copyright 2016 Arduino LLC (http://www.arduino.cc/)
+ Copyright 2017 Arduino LLC (http://www.arduino.cc/)
 
  Arduino is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

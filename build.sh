@@ -26,8 +26,8 @@
 # invalidate any other reasons why the executable file might be covered by
 # the GNU General Public License.
 
-REV=0.8.3
-ZIP_FILENAME=WiFi101-Updater-ArduinoIDE-Plugin-$REV
+REV=0.8.4
+ZIP_FILENAME=UnoWiFi-Updater-ArduinoIDE-Plugin-$REV
 REQUIRED_JARS="pde.jar arduino-core.jar jssc-2.8.0.jar bcpg-jdk15on-152.jar bcprov-jdk15on-152.jar"
 
 # Check existence of the IDE folder
@@ -45,7 +45,7 @@ fi
 CLASSPATH="src"
 for JAR in $REQUIRED_JARS; do
 	case "$OSTYPE" in
-		darwin*)  JARFILE="$IDE_FOLDER/Java/$JAR" ;; 
+		darwin*)  JARFILE="$IDE_FOLDER/Java/$JAR" ;;
 		*)        JARFILE="$IDE_FOLDER/lib/$JAR" ;;
 	esac
 	if [[ -z "$JARFILE" ]]; then
@@ -57,30 +57,31 @@ for JAR in $REQUIRED_JARS; do
 done
 
 # Create staging folder
-OUTPUT_FOLDER=`pwd`/WiFi101/tool
+OUTPUT_FOLDER=`pwd`/UnoWiFi/tool
 mkdir -p $OUTPUT_FOLDER
 
 # Build java plugin
 mkdir -p build
-javac -target 1.8 -cp "$CLASSPATH" -d build src/cc/arduino/plugins/wifi101/WiFi101.java
+javac -target 1.8 -cp "$CLASSPATH" -d build src/cc/arduino/plugins/unowifi/UnoWiFi.java
 cd build
-zip -r $OUTPUT_FOLDER/WiFi101.jar *
+zip -r $OUTPUT_FOLDER/UnoWiFi.jar *
 cd ..
 rm -r build
 
 # Copy resources
 cp -rv firmwares $OUTPUT_FOLDER
 # cp -v winc1500-uploader-* $OUTPUT_FOLDER # This is needed if we use the CLIFlasher class instead of JavaFlasher
+cp -rv bin $OUTPUT_FOLDER
 
 # Create distribution .zip
 mkdir -p dist
-zip -r dist/$ZIP_FILENAME.zip WiFi101/
+zip -r dist/$ZIP_FILENAME.zip UnoWiFi/
 
 # Cleanup
-rm -r WiFi101
+rm -r UnoWiFi
 
 # Install in current IDE
 case "$OSTYPE" in
-	darwin*)  unzip -o dist/$ZIP_FILENAME.zip -d $IDE_FOLDER/Java/tools ;; 
+	darwin*)  unzip -o dist/$ZIP_FILENAME.zip -d $IDE_FOLDER/Java/tools ;;
 	*)        unzip -o dist/$ZIP_FILENAME.zip -d $IDE_FOLDER/tools ;;
 esac
