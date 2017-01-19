@@ -150,7 +150,7 @@ public abstract class CLIFlasher implements Flasher {
 			progressCounter += 10;
 			if (msg.length() >= 20) {
 				// Crop timestamp
-				msg = msg.substring(20);
+				msg = msg.substring(0,20) + "...";
 			}
 
 			progress(progressCounter, msg);
@@ -160,7 +160,7 @@ public abstract class CLIFlasher implements Flasher {
 			progressCounter += 10;
 			if (msg.length() >= 20) {
 				// Crop timestamp
-				msg = msg.substring(20);
+				msg = msg.substring(0,20) + "...";
 			}
 
 			progress(progressCounter, msg);
