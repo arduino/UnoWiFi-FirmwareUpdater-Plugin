@@ -44,22 +44,22 @@ public class UnoWiFiFirmware {
 	}
 
 	public static Map<String, String> fw1 = new HashMap<String, String>(){{
-		put("0x00000","firmwares/20151223/user1.bin");
-		put("0x1000","firmwares/20151223/boot_v1.4.bin_rep");
+		put("0x00000","firmwares/20151223/boot_v1.4.bin_rep");
+		put("0x1000","firmwares/20151223/user1.bin");
 		put("0x3FC000","firmwares/20151223/esp_init_data_default.bin_rep");
 		put("0x3FE000","firmwares/20151223/blank.bin");
 	}};
 
 	public static Map<String, String> fw2 = new HashMap<String, String>(){{
-		put("0x00000","firmwares/20160318/user1.bin");
-		put("0x1000","firmwares/20160318/boot_v1.4.bin_rep");
+		put("0x00000","firmwares/20160318/boot_v1.4.bin_rep");
+		put("0x1000","firmwares/20160318/user1.bin");
 		put("0x3FC000","firmwares/20160318/esp_init_data_default.bin_rep");
 		put("0x3FE000","firmwares/20160318/blank.bin");
 	}};
 
 	public static Map<String, String> fw3 = new HashMap<String, String>(){{
-		put("0x00000","firmwares/20161121/user1.bin");
-		put("0x1000","firmwares/20161121/boot_v1.4.bin_rep");
+		put("0x00000","firmwares/20161121/boot_v1.4.bin_rep");
+		put("0x1000","firmwares/20161121/user1.bin");
 		put("0x3FC000","firmwares/20161121/esp_init_data_default.bin_rep");
 		put("0x3FE000","firmwares/20161121/blank.bin");
 	}};
